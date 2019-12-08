@@ -1,3 +1,5 @@
 FROM node:6-alpine
-COPY hello.js /app/
-CMD ["node", "/app/hello.js"]
+COPY *.js ./
+COPY *.json ./
+RUN npm install
+CMD ["node", "server.js"]
